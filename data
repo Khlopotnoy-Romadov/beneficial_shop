@@ -1,0 +1,11 @@
+   str = random.randint(0,2)
+    if str==0:
+        shops[i]['адрес']=my_faker.bothify('ул. Авачинская, д. ##')
+    elif str==1:
+        shops[i]['адрес'] = my_faker.bothify('ул. Кондратьева, д. ##')
+    else:
+        shops[i]['адрес'] = my_faker.bothify('ул. Причудная, д. ##')
+
+
+for i in shops:
+    print(f'{i}: {shops[i]}')
