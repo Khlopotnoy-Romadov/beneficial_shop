@@ -1,15 +1,16 @@
-from main import streets
-import pandas as pd, numpy as np
+from data import streets
+import pandas as pd, numpy as np, random
 
 print()
 print(streets)
-columns = [f'{i}, д. {j}' for i in streets for j in range(1, 101)]
-df = pd.DataFrame(np.random.randint (0, 100, size=(300, 300)), index = columns, columns = columns)
-for item in columns:
-    df.loc[item, item] = 0
+columns = [f'{i}, д. {j}' if j>=10 else f'{i}, д. 0{j}' for i in streets for j in range(1, 101)]
+df = pd.DataFrame(0, index = columns, columns = columns)
+count = 0
 for i in columns:
-    for j in columns:
-        df[i][j] = df[j][i]
-
+    df[i] = [abs((j-count)*30)+random.randint(-15,15) for j in range(len(columns))]
+    df.loc[i, i] = 0
+    count+=1
 
 print(df)
+# print(df.loc[columns[298:300],columns[0:2]])
+# print(df.loc[columns[0:2],columns[298:300]])
