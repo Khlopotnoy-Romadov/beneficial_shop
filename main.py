@@ -11,26 +11,21 @@ class Main(QtWidgets.QMainWindow, interface.Ui_MainWindow):
         self.setupUi(self)
 
         self.pushButton_searchAddress.pressed.connect(self.go)
+        self.listWidget_goods.setSelectionMode(QAbstractItemView.MultiSelection)
         self.pushButton_searchGoods.pressed.connect(self.result)
         # self.pushButton_close.pressed.connect(self.close)
 
     def go(self):
         street = self.lineEdit_street.text()
         number = self.lineEdit_number.text()
-        self.do(street, number)
-
-    def do(self, street, number):
         print(street + " " + number)
 
-        self.listWidget_goods.setSelectionMode(QAbstractItemView.MultiSelection)
-        self.listWidget_goods.itemSelectionChanged.connect(self.best)
-
-    def best(self):
+    def result(self):
         goods = [item.text() for item in self.listWidget_goods.selectedItems()]
-        self.result(goods)
-
-    def result(self, lst):
-        print(list_of_purchases(lst))
+        otvet = list_of_purchases(goods)
+        print(goods)
+        print(otvet)
+        self.label_result.setText('Магазин: ' + '"' + str(otvet[0]) + '"' + '. Адрес: ' + str(otvet[1]))
 
 if __name__ == "__main__":
     App = QtWidgets.QApplication([])

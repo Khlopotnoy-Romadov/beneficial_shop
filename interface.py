@@ -4,7 +4,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(999, 699)
+        MainWindow.resize(999, 704)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(self.centralwidget)
@@ -43,7 +43,7 @@ class Ui_MainWindow(object):
         self.pushButton_searchAddress.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.pushButton_searchAddress.setObjectName("pushButton_searchAddress")
         self.textEdit_shops = QtWidgets.QTextEdit(self.centralwidget)
-        self.textEdit_shops.setGeometry(QtCore.QRect(630, 400, 361, 241))
+        self.textEdit_shops.setGeometry(QtCore.QRect(630, 210, 361, 241))
         self.textEdit_shops.setStyleSheet("background-color: rgba(255, 255, 255, 225);")
         self.textEdit_shops.setObjectName("textEdit_shops")
         self.listWidget_goods = QtWidgets.QListWidget(self.centralwidget)
@@ -86,6 +86,22 @@ class Ui_MainWindow(object):
         self.pushButton_searchGoods.setFont(font)
         self.pushButton_searchGoods.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.pushButton_searchGoods.setObjectName("pushButton_searchGoods")
+        self.label_headResult = QtWidgets.QLabel(self.centralwidget)
+        self.label_headResult.setGeometry(QtCore.QRect(436, 492, 551, 31))
+        font = QtGui.QFont()
+        font.setPointSize(17)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_headResult.setFont(font)
+        self.label_headResult.setStyleSheet("background-color: rgba(255, 255, 255, 225);")
+        self.label_headResult.setObjectName("label_headResult")
+        self.label_result = QtWidgets.QLabel(self.centralwidget)
+        self.label_result.setGeometry(QtCore.QRect(446, 542, 531, 91))
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        self.label_result.setFont(font)
+        self.label_result.setStyleSheet("background-color: rgba(255, 255, 255, 225);")
+        self.label_result.setObjectName("label_result")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 999, 21))
@@ -103,18 +119,18 @@ class Ui_MainWindow(object):
         self.lineEdit_number.setPlaceholderText(_translate("MainWindow", "Введите номер дома"))
         self.pushButton_searchAddress.setText(_translate("MainWindow", "Поиск"))
         self.textEdit_shops.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-        "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-        "p, li { white-space: pre-wrap; }\n"
-        "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt; font-weight:600; text-decoration: underline;\">Наши магазины-партнёры:</span></p>\n"
-        "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:16pt; font-weight:600;\"><br /></p>\n"
-        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt;\">&quot;Шестёрочка&quot;</span></p>\n"
-        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt;\">&quot;Диски&quot;</span></p>\n"
-        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt;\">&quot;Компас&quot;</span></p>\n"
-        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt;\">&quot;Развилка&quot;</span></p>\n"
-        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt;\">&quot;Преданный&quot;</span></p>\n"
-        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt;\">&quot;Хорошо&quot;</span></p>\n"
-        "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt;\">&quot;Наша&quot;</span></p></body></html>"))
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt; font-weight:600; text-decoration: underline;\">Наши магазины-партнёры:</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:16pt; font-weight:600;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt;\">&quot;Шестёрочка&quot;</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt;\">&quot;Диски&quot;</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt;\">&quot;Компас&quot;</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt;\">&quot;Развилка&quot;</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt;\">&quot;Преданный&quot;</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt;\">&quot;Хорошо&quot;</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt;\">&quot;Наша&quot;</span></p></body></html>"))
         __sortingEnabled = self.listWidget_goods.isSortingEnabled()
         self.listWidget_goods.setSortingEnabled(False)
         item = self.listWidget_goods.item(0)
@@ -136,6 +152,7 @@ class Ui_MainWindow(object):
         self.listWidget_goods.setSortingEnabled(__sortingEnabled)
         self.label_pick.setText(_translate("MainWindow", "Выберите необходимые продукты:"))
         self.pushButton_searchGoods.setText(_translate("MainWindow", "Найти лучший вариант покупки"))
+        self.label_headResult.setText(_translate("MainWindow", "Лучший магазин для покупок ваших товаров"))
 
 
 if __name__ == "__main__":
