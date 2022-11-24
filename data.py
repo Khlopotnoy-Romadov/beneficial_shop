@@ -24,7 +24,7 @@ for i in shops.keys():
     else:
         shops[i]['адрес'] = my_faker.bothify('ул. Причудная, д. ##')
 
+streets = ['ул. Авачинская', 'ул. Кондратьева', 'ул. Причудная']
 
 for i in shops:
     print(f'{i}: {shops[i]}')
-
