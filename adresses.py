@@ -18,3 +18,6 @@ for i in range(len(columns)):
 print(df)
 #print(df.loc[columns[296:298],columns[10:12]])
 #print(df.loc[columns[10:12],columns[296:298]])
+
+df1 = pd.read_csv('C:\\address.csv')
+print(df1)
