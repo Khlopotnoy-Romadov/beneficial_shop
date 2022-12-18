@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>999</width>
-    <height>823</height>
+    <width>974</width>
+    <height>937</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,8 +17,8 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>-4</x>
-      <y>-8</y>
+      <x>-30</x>
+      <y>20</y>
       <width>1929</width>
       <height>1200</height>
      </rect>
@@ -29,8 +29,11 @@
     <property name="pixmap">
      <pixmap>tekstura-s-produktami-pitaniya.jpg</pixmap>
     </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="lineEdit_street">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -45,13 +48,13 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(255, 255, 255, 200);</string>
+     <string notr="true">background-color: rgba(255, 255, 255, 225);</string>
     </property>
     <property name="placeholderText">
      <string>Введите вашу улицу</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="label_heading">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -65,16 +68,17 @@
       <pointsize>20</pointsize>
       <weight>75</weight>
       <bold>true</bold>
+      <underline>false</underline>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(255, 255, 255, 200);</string>
+     <string notr="true">background-color: rgba(255, 255, 255, 225);</string>
     </property>
     <property name="text">
      <string>Найдите самый выгодный магазин для покупки в вашем районе!</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="lineEdit_number">
     <property name="geometry">
      <rect>
       <x>442</x>
@@ -89,13 +93,13 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(255, 255, 255, 200);</string>
+     <string notr="true">background-color: rgba(255, 255, 255, 225);</string>
     </property>
     <property name="placeholderText">
      <string>Введите номер дома</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="pushButton_searchAddress">
     <property name="geometry">
      <rect>
       <x>794</x>
@@ -116,41 +120,13 @@
      <string>Поиск</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="textEdit">
+   <widget class="QListWidget" name="listWidget_goods">
     <property name="geometry">
      <rect>
-      <x>610</x>
-      <y>540</y>
-      <width>361</width>
-      <height>241</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgba(255, 255, 255, 200);</string>
-    </property>
-    <property name="html">
-     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600; text-decoration: underline;&quot;&gt;Наши магазины-партнёры:&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:16pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&amp;quot;Шестёрочка&amp;quot;&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&amp;quot;Диски&amp;quot;&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&amp;quot;Компас&amp;quot;&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&amp;quot;Развилка&amp;quot;&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&amp;quot;Преданный&amp;quot;&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&amp;quot;Хорошо&amp;quot;&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;&amp;quot;Наша&amp;quot;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-   </widget>
-   <widget class="QListWidget" name="listWidget">
-    <property name="geometry">
-     <rect>
-      <x>25</x>
-      <y>331</y>
-      <width>341</width>
-      <height>371</height>
+      <x>30</x>
+      <y>270</y>
+      <width>401</width>
+      <height>91</height>
      </rect>
     </property>
     <property name="font">
@@ -158,48 +134,486 @@ p, li { white-space: pre-wrap; }
       <pointsize>15</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 225);</string>
+    </property>
     <property name="selectionMode">
      <enum>QAbstractItemView::MultiSelection</enum>
     </property>
     <item>
      <property name="text">
-      <string>Хлеб</string>
+      <string>хлеб</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>Сыр</string>
+      <string>сыр</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>Колбаса</string>
+      <string>колбаса</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>молоко</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>помидоры</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>огурцы</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>говядина</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>свинина</string>
      </property>
     </item>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="label_pick_1">
     <property name="geometry">
      <rect>
-      <x>26</x>
-      <y>232</y>
-      <width>341</width>
+      <x>30</x>
+      <y>210</y>
+      <width>401</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 225);</string>
+    </property>
+    <property name="text">
+     <string>Выберите необходимые продукты:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_searchGoods">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>470</y>
+      <width>401</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Найти лучший вариант покупки</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_headResult">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>530</y>
+      <width>551</width>
       <height>31</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>17</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 225);</string>
+    </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>Лучший магазин для покупок ваших товаров</string>
     </property>
    </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>999</width>
-     <height>21</height>
-    </rect>
-   </property>
+   <widget class="QLabel" name="label_result">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>570</y>
+      <width>551</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>21</pointsize>
+      <italic>false</italic>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 225);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="listWidget_shops">
+    <property name="geometry">
+     <rect>
+      <x>535</x>
+      <y>271</y>
+      <width>411</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 225);</string>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::MultiSelection</enum>
+    </property>
+    <item>
+     <property name="text">
+      <string>&quot;Шестёрочка&quot;</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>&quot;Диски&quot;</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>&quot;Компас&quot;</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>&quot;Развилка&quot;</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>&quot;Преданный&quot;</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>&quot;Хорошо&quot;</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>&quot;Наша&quot;</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_pick_2">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>210</y>
+      <width>401</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="acceptDrops">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 225);</string>
+    </property>
+    <property name="text">
+     <string>Выберите магазины, в которых у вас имеется скидочная карта:</string>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_more">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>660</y>
+      <width>351</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Получить подробную информацию</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_more_inf">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>710</y>
+      <width>491</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>21</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 225);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_feedback">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>750</y>
+      <width>341</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <item>
+     <property name="text">
+      <string>1 (непригодно для использования)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2 (больше минусов, чем плюсов)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3 (приемлемо)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4 (комфортно пользоваться)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5 (всё супер)</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_feedback">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>690</y>
+      <width>341</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 225);</string>
+    </property>
+    <property name="text">
+     <string>Поставьте оценку нашему приложению</string>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_thank">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>870</y>
+      <width>341</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 225);</string>
+    </property>
+    <property name="text">
+     <string>Спасибо за оценку!</string>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_price">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>380</y>
+      <width>191</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <item>
+     <property name="text">
+      <string>1 (не важно)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2 (важно)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3 (очень важно)</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_price">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>380</y>
+      <width>211</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 225);</string>
+    </property>
+    <property name="text">
+     <string>Приоритет по цене</string>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_distance">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>380</y>
+      <width>211</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 225);</string>
+    </property>
+    <property name="text">
+     <string>Приоритет по расстоянию</string>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_distance">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>380</y>
+      <width>201</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <item>
+     <property name="text">
+      <string>1 (не важно)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2 (важно)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3 (очень важно)</string>
+     </property>
+    </item>
+   </widget>
   </widget>
  </widget>
  <resources/>
