@@ -1,7 +1,6 @@
 from faker import Faker
 import random
 
-#if __name__ == "__main__" :
 my_faker = Faker("ru_RU")
 Faker.seed(200)
 
@@ -36,6 +35,3 @@ def discount(picks):
             otvet.append(0)
 
     return otvet
-
-#for i in shops:
- #   print(f'{i}: {shops[i]}')
