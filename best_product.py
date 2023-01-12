@@ -2,9 +2,6 @@ from data import shops
 from adresses import df
 import random, copy
 
-print(shops)
-print()
-
 def list_of_purchases(lst: list, shops: dict)->dict:
     values = dict()
     for i in lst:
@@ -15,23 +12,17 @@ def list_of_purchases(lst: list, shops: dict)->dict:
                 values[j] = shops[j][i]
     return values
 
-print(list_of_purchases(["колбаса", "огурцы"], shops))
-
 def distance(adress: str) -> dict:
     dist = dict()
     for i in shops.keys():
         dist[i] = df.loc[adress, shops[i]['адрес']]
     return dist
 
-print(distance("ул. Авачинская, д. 20"))
-
 def discount_card()->dict:
     disc = dict()
     for i in shops.keys():
         disc[i] = random.randint(3, 9)
     return disc
-
-print(discount_card())
 
 def best_shop(lst: list, adress: str, v_imp = 2, d_imp = 1, cards = [0]*len(shops)) -> list:
     shops1 = dict()
@@ -56,12 +47,3 @@ def best_shop(lst: list, adress: str, v_imp = 2, d_imp = 1, cards = [0]*len(shop
             min = res[i]
             min_mag = i
     return [min_mag, shops[min_mag]['адрес'], val, dis]
-
-print(best_shop(["колбаса", "огурцы"], "ул. Авачинская, д. 20", cards = [1,1,0,0,0,0,0,0]))
-
-
-
-
-
-
-
